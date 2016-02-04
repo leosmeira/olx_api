@@ -1,0 +1,5 @@
+config:
+    sdk_version: OLX-API-1.0.0
+    api_root_url: https://apps.olx.com.br
+    auth_url: https://auth.olx.com.br/oauth
+    oauth_url: https://auth.olx.com.br/oauth/token
