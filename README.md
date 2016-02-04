@@ -25,22 +25,22 @@ Leia a documentação que encontra-se no diretório 'doc'
 Envie um email para: integracao@olxbr.com com as seguintes informações:
 
 
-**Nome do cliente: **
+**Nome do cliente:**
 
 (é o nome da empresa responsável pelo software que vai integrar conosco, exemplo Itegrador Ltda)
 
-**Nome da aplicação: **
+**Nome da aplicação:**
 (é nome do software, ex integrador imóveis 2.0)
 
-**Descrição da aplicação: **
+**Descrição da aplicação:**
 
 (é resumo de quem o software atende, ex: integrador imóveis 2.0 atende imobiliárias em toda região sudeste ou integrador imóveis 2.0 atende exclusivamente a imobiliária [Nome] Imóveis)
 
-**Website: ** é a url do site do integrador, ex: www.integradorltda.com.br 
+**Website:** é a url do site do integrador, ex: www.integradorltda.com.br 
 
-**Telefone: **
+**Telefone:**
 
-**E-mail: **
+**E-mail:**
 
 **URLs de redirecionamento:**
 
