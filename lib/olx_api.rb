@@ -31,9 +31,10 @@ class OlxApi
     end
 
     #AUTH METHODS
-    def auth_url(redirect_URI)
-        params = {:client_id  => @app_id, :response_type => 'code', :redirect_uri => redirect_URI, :scope => 'basic_user_info autoupload'}
-        url = "#{AUTH_URL}?#{to_url_params(params)}"
+    def auth_url(redirect_URI, params = {})
+        params_full = {:client_id  => @app_id, :response_type => 'code', :redirect_uri => redirect_URI, :scope => 'basic_user_info autoupload'}
+        params_full.merge!(params)
+        url = "#{AUTH_URL}?#{to_url_params(params_full)}"
     end
 
     def authorize(code, redirect_URI)
