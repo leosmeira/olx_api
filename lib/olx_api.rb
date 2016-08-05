@@ -37,7 +37,7 @@ class OlxApi
         url = "#{AUTH_URL}?#{to_url_params(params_full)}"
     end
 
-    def authorize(code, redirect_URI)
+    def authorize(code, redirect_URI, params = {})
         
         auth_url = URI.parse OAUTH_URL
         @https_auth = Net::HTTP.new(auth_url.host, auth_url.port)
@@ -46,14 +46,14 @@ class OlxApi
         @https_auth.ssl_version = :TLSv1
 
 
-        params = { :grant_type => 'authorization_code', :client_id => @app_id, :client_secret => @secret, :code => code, :redirect_uri => redirect_URI}
-
+        params_full = { :grant_type => 'authorization_code', :client_id => @app_id, :client_secret => @secret, :code => code, :redirect_uri => redirect_URI}
+        params_full.merge!(params)
 
         req = Net::HTTP::Post.new(OAUTH_URL)
         req['Accept'] = 'application/json'
         req['User-Agent'] = SDK_VERSION
         req['Content-Type'] = "application/x-www-form-urlencoded"
-        req.set_form_data(params)
+        req.set_form_data(params_full)
         response = @https_auth.request(req)
 
         case response
